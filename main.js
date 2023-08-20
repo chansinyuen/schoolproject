@@ -82,3 +82,41 @@ function emergencystop(){
 
 // Append the bar to the body
 document.body.appendChild(barElement);
+
+function runSpeechRecognition() {
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var recognition = new SpeechRecognition();
+
+    // This runs when the speech recognition service starts
+    recognition.onstart = function() {
+        action.innerHTML = "<small>listening, please speak...</small>";
+    };
+
+    recognition.onspeechend = function() {
+        console.log("Speech recognition ended.");
+        recognition.stop(); // Stop recognition after each session
+        runSpeechRecognition();
+    }
+
+    // This runs when the speech recognition service returns result
+    recognition.onresult = function(event) {
+        var transcript = event.results[0][0].transcript.toLowerCase();
+        console.log("You said:", transcript);
+
+        if (transcript.includes('next page')) {
+            testFunction();
+        }
+    };
+
+    // start recognition
+    recognition.start();
+}
+
+function testFunction() {
+    console.log("Test function executed!");
+
+// Simulate a click event on the button
+    document.querySelector('button[aria-label="Next page"]').click()
+}
+
+runSpeechRecognition();
