@@ -34,7 +34,7 @@ waitForElement('div[style="top: 0px; left: 0px; width: 617.659px; height: 164.06
 }, 500);
 
 function page3() {
-    waitForElement('a[href="#page-3"]', function() {
-        document.querySelector('a[href="#page-3"]').parentElement.parentElement.parentElement.style.animation = 'floating 3s ease-in-out infinite'
+    waitForElement('a[href="#page-4"]', function() {
+        document.querySelector('a[href="#page-4"]').parentElement.parentElement.parentElement.style.animation = 'floating 3s ease-in-out infinite'
     }, 500);
 }
