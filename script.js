@@ -22,8 +22,6 @@ function waitForElement(selector, callback, waitTime) {
     }
 }
 
-document.querySelector('a[href="#page-1"]').parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.style.animation = 'floating 3s ease-in-out infinite'
-
 waitForElement('div[style="top: 0px; left: 0px; width: 617.659px; height: 164.064px; padding: 4px; pointer-events: auto; justify-content: center;"]', function() {
     document.querySelectorAll('div[style="top: 0px; left: 0px; width: 617.659px; height: 164.064px; padding: 4px; pointer-events: auto; justify-content: center;"]')[0].parentElement.parentElement.style.animation = 'floating 3s ease-in-out infinite'
     document.querySelector('path[d="M7,7C7,-4.597979746446603 16.40202025355334,-14 28,-14C39.59797974644666,-14 49,-4.597979746446603 49,7C49,18.59797974644672 39.59797974644666,28 28,28C16.40202025355334,28 7,18.59797974644672 7,7"]').parentElement.parentElement.parentElement.parentElement.style.animation = 'floating 3s ease-in-out infinite'
